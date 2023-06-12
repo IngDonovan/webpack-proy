@@ -1,1 +1,0 @@
-document.getElementById("links"),document.querySelector("h1");
