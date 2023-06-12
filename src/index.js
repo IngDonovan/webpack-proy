@@ -65,3 +65,5 @@ const main = ( ) => {
     $name.appendChild(name);
 }
 
+
+main();
