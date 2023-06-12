@@ -4,15 +4,16 @@ const $name = document.querySelector('h1');
 const data = 
 {
     name: "Donovan Rojas Mendoza",
-    nickname: "ingdrm",
-    description: "...",
-    avatar: "...",
+    nickname: "@ingdrm",
+    tecnologias: 'Frontend Developer, #JavaScript #React #Web3',
+    description: "I'am web developer and like it, ",
+    avatar: "https://avatars.githubusercontent.com/u/119254368?s=400&u=79c99a8bb518a60725783d3f07ec4a3c31a45c21&v=4",
     social: 
     [
       {
         name: "twitter",
-        url: "https://twitter.com/",
-        username: "",
+        url: "https://twitter.com/ingdrm",
+        username: "@ingdrm",
       },
       {
         name: "instagram",
@@ -26,7 +27,7 @@ const data =
       {
         name: "blog",
         url: "https://example.com/",
-        color: "red",
+        color: "blue",
         emoji: "📖",
       },
       {
