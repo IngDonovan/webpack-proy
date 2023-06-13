@@ -1,12 +1,19 @@
-const $links = document.getElementById('links');
+const $tooltext = document.getElementById('barInfo');
 const $name = document.querySelector('h1');
+const $nickName = document.querySelector('h2');
+const $profile = document.getElementById('profile');
+const $img = document.getElementById('imgP');
+const $side = document.getElementById('side');
+const $links = document.getElementById('links');
+
 
 const data = 
 {
+    tooltext: "We are working for you!",
     name: "Donovan Rojas Mendoza",
     nickname: "@ingdrm",
     tecnologias: 'Frontend Developer, #JavaScript #React #Web3',
-    description: "I am an industrial engineer and mechatronics technologist with a passion for web development. My goal is to become a highly skilled full-stack developer and provide innovative technological solutions.With a solid foundation in HTML, CSS, and JavaScript, I have created frontend projects that showcase my ability to design attractive and functional interfaces. My primary focus currently lies in expanding my knowledge in Node.js and developing backend skills to complement my frontend expertise.My background in industrial engineering and mechatronics has provided me with a strong foundation in problem analysis and creative problem-solving. I utilize these skills to tackle web development challenges with a structured and efficient approach.",
+    description: "I am an industrial engineer and mechatronics technologist with a passion for web development. My goal is to become a highly skilled full-stack developer and provide innovative technological solutions.With a solid foundation in HTML, CSS, and JavaScript, I have created frontend projects that showcase my ability to design attractive and functional interfaces.",
     avatar: "https://avatars.githubusercontent.com/u/119254368?s=400&u=79c99a8bb518a60725783d3f07ec4a3c31a45c21&v=4",
     social: 
     [
@@ -47,25 +54,40 @@ const data =
         emoji: "💬",
       },
     ],
-    footer: "Made with Love on Colombia",
+    footer: "Deus meus et omnia",
 };
 
 const main = ( ) => {
-    let name = document.createTextNode(data?.name);
-    let links = data?.links?.map((link) => {
-        return `
-            <div class="bg-${link.color}-200 px-4 py-5 w-full flex justify-between">
-                <a class="text-sm font-bold text-${link.color}-600 text-center hover:text-${link.color}-800 cursor-pointer"
-                href="${link.url}" target="_blank">
-                ${link.name}
-                </a>
-                <span>${link.emoji}</span>
-            </div>`
+  let tooltext = document.createTextNode(data?.tooltext);
+  let name = document.createTextNode(data?.name);
+  let nick = document.createTextNode(data?.nickname);
+  let profile = document.createTextNode(data?.tecnologias);
+  let side = document.createTextNode(data?.description);
+  
+  
+  let links = data?.links?.map((link) => {
+    return `
+      <div class="bg-${link.color}-200 px-4 py-5 w-full flex justify-between">
+          <a class="text-sm font-bold text-${link.color}-600 text-center hover:text-${link.color}-800 cursor-pointer"
+          href="${link.url}" target="_blank">
+          ${link.name}
+          </a>
+          <span>${link.emoji}</span>
+      </div>`
     }).join('');
+
     let newItem = document.createElement('section');
     newItem.innerHTML = links;
-    $links.appendChild(newItem);
+
+    $img.src = data?.avatar;
+
+    $tooltext.appendChild(tooltext);
     $name.appendChild(name);
+    $nickName.appendChild(nick);
+    $profile.appendChild(profile);
+    $side.appendChild(side);
+    
+    $links.appendChild(newItem);
 }
 
 
