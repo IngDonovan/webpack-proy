@@ -8,7 +8,6 @@ const $social = document.getElementById('sociaLinks');
 const $links = document.getElementById('links');
 const $footer = document.getElementById('footer');
 
-
 const data = 
 {
     tooltext: "We are working for you!",
